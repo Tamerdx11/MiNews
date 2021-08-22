@@ -3,4 +3,10 @@
     <string name="btn_text">Show Employees</string>
     <string name="cancel_text">Cancel</string>
     <string name="ok_text">Ok</string>
+    <string name="login">Sign up</string>
+    <string name="welcome">Created by Mega team,</string>
+    <string name="banner">World news and developments</string>
+    <string name="ban">in various fields</string>
+    <string name="welc">see more</string>
+
 </resources>
