@@ -1,12 +1,11 @@
 <resources>
     <string name="app_name">MiNews</string>
-    <string name="btn_text">Show Employees</string>
-    <string name="cancel_text">Cancel</string>
-    <string name="ok_text">Ok</string>
-    <string name="login">Sign up</string>
     <string name="welcome">Created by Mega team,</string>
     <string name="banner">World news and developments</string>
     <string name="ban">in various fields</string>
-    <string name="welc">see more</string>
+    <string name="txt_titl">Title</string>
+    <string name="txt_news">News</string>
+    <string name="txt_date">Date</string>
+    <string name="see">See News</string>
 
 </resources>

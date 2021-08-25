@@ -1,12 +1,10 @@
 package com.example.ahmedtawfik.lab05android;
 
-import android.content.DialogInterface;
 import android.media.MediaPlayer;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,31 +14,22 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<ArrayList<String>> {
+public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<ArrayList<news>> {
 
     Button btn_showEmployees;
     ListView lv_showEmployees;
-    MediaPlayer player;
     ProgressBar progressBar;
-    static ArrayList<String> students = new ArrayList<>();
+    static ArrayList<news> arrayList_news = new ArrayList<>();
+
+    private static String custom_url = "https://jsonware.com/json/d7556a9a2d8315ad144fa08e606a697b.json";
 
     private static String STUDENTS_URL = "https://jsonware.com/json/5a182107d299cb9e5a9101f0e4ddb0e3.json";
-
-    /*static String jsonString = "{\"university\":\"Benha\",\"faculty\":\"BFCAI\",\"students\"" +
-            ":[{\"id\":1,\"name\":\"Ahmed Mohamed\",\"age\":25,\"email\":\"ahmed.mohamed@mail.com\"" +
-            ",\"phone\":\"01212345678\"},{\"id\":2,\"name\":\"Ahmed Ali\",\"age\":20,\"email\"" +
-            ":\"ahmed.ali@mail.com\",\"phone\":\"01212340000\"},{\"id\":3,\"name\":\"Mahmoud Mohamed" +
-            "\",\"age\":27,\"email\":\"mahmoud.mohamed@mail.com\",\"phone\":\"01211115678\"},{\"id\":4," +
-            "\"name\":\"Hesham Mohamed\",\"age\":24,\"email\":\"ahmed.mohamed@mail.com\",\"phone\":" +
-            "\"01212345678\"},{\"id\":5,\"name\":\"Samy Mohamed\",\"age\":25,\"email\":\"ahmed.mohamed@mail.com" +
-            "\",\"phone\":\"01212345678\"}]}";*/
-
+    private static String NEWS_URL = "http://api.mediastack.com/v1/news?access_key=bb82f4094db45839054ba3176d02a9f6";
+    private static String NEWS_URL_EG ="https://newsapi.org/v2/everything?q=Apple&from=2021-08-25&sortBy=popularity&apiKey=b11a2c06db824342bc77ce5660410285";
+    //ACCESS_KEY(NEWS_URL_EG) = b11a2c06db824342bc77ce5660410285
+    // ACCESS_KEY(NEWS_URL) = bb82f4094db45839054ba3176d02a9f6
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -48,81 +37,46 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         setContentView(R.layout.activity_main);
 
         lv_showEmployees = findViewById(R.id.lv_showEmployees);
-        btn_showEmployees = findViewById(R.id.btn_showEmployees);
+       // btn_showEmployees = findViewById(R.id.btn_showEmployees);
         progressBar = findViewById(R.id.pb_progress);
 
 
-        btn_showEmployees.setOnClickListener(new View.OnClickListener() {
+        LoaderManager loaderManager = getSupportLoaderManager();
+        loaderManager.initLoader(0, null, MainActivity.this).forceLoad();
+
+       /* btn_showEmployees.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
+                arrayList_news.add(new news("title","NEWS","12/8/2021"));
                 LoaderManager loaderManager = getSupportLoaderManager();
                 loaderManager.initLoader(0, null, MainActivity.this).forceLoad();
-
-
-
-/*                try {
-                    JSONObject jsonRoot = new JSONObject(jsonString);
-
-                    JSONArray jsonArray = jsonRoot.getJSONArray("students");
-
-                    for (int i = 0; i < jsonArray.length(); i++) {
-                        JSONObject student = jsonArray.getJSONObject(i);
-
-                        int id = student.getInt("id");
-                        String name = student.getString("name");
-                        int age = student.getInt("age");
-                        String email = student.getString("email");
-                        String phone = student.getString("phone");
-
-                        students.add("Id: " + id + "\nName: " + name + "\nAge: " + age + "\nEmail " + email + "\nPhone: " + phone);
-
-                    }
-
-                    studentsAdapter.notifyDataSetChanged();
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-                */
-
             }
-        });
-
-
-        //player = MediaPlayer.create(MainActivity.this, R.raw.railroad);
+        });*/
 
     }
 
     @NonNull
     @Override
-    public Loader<ArrayList<String>> onCreateLoader(int i, @Nullable Bundle bundle) {
+    public Loader<ArrayList<news>> onCreateLoader(int i, @Nullable Bundle bundle) {
         progressBar.setVisibility(View.VISIBLE);
-        return new StudentLoader(MainActivity.this, STUDENTS_URL);
+        return new StudentLoader(MainActivity.this, custom_url);
     }
 
     @Override
-    public void onLoadFinished(@NonNull Loader<ArrayList<String>> loader, ArrayList<String> students) {
+    public void onLoadFinished(@NonNull Loader<ArrayList<news>> loader, ArrayList<news> students) {
 
         progressBar.setVisibility(View.GONE);
 
         if (students.size() == 0)
             Toast.makeText(getApplicationContext(), "No Internet Connection", Toast.LENGTH_SHORT).show();
 
-        ArrayAdapter<String> studentsAdapter = new ArrayAdapter<>(getApplicationContext(), R.layout.list_item, students);
+       final NewsAdapter newsAdapter = (NewsAdapter) new NewsAdapter(getApplicationContext(), /*R.layout.list_item_new,*/ students);
 
-
-        lv_showEmployees.setAdapter(studentsAdapter);
-
-       //studentsAdapter.clear();
-
-        //studentsAdapter.notifyDataSetChanged();
+        lv_showEmployees.setAdapter(newsAdapter);
 
     }
 
     @Override
-    public void onLoaderReset(@NonNull Loader<ArrayList<String>> loader) {
-        //students.clear();
+    public void onLoaderReset(@NonNull Loader<ArrayList<news>> loader) {
     }
 }

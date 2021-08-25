@@ -2,7 +2,6 @@ package com.example.ahmedtawfik.lab05android;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v4.content.AsyncTaskLoader;
 import android.widget.Toast;
 
@@ -14,7 +13,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.Charset;
@@ -22,10 +20,10 @@ import java.util.ArrayList;
 
 import javax.net.ssl.HttpsURLConnection;
 
-public class StudentLoader extends AsyncTaskLoader<ArrayList<String>> {
+public class StudentLoader extends AsyncTaskLoader<ArrayList<news>> {
 
     String url = null;
-    ArrayList<String> students = new ArrayList<>();
+    ArrayList<news> arrayList_news = new ArrayList<>();
 
     public StudentLoader(@NonNull Context context, String url) {
         super(context);
@@ -83,7 +81,7 @@ public class StudentLoader extends AsyncTaskLoader<ArrayList<String>> {
     }
 
     @Override
-    public ArrayList<String> loadInBackground() {
+    public ArrayList<news> loadInBackground() {
 
 
         JSONObject jsonRoot = null;
@@ -96,13 +94,10 @@ public class StudentLoader extends AsyncTaskLoader<ArrayList<String>> {
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject student = jsonArray.getJSONObject(i);
 
-                int id = student.getInt("id");
-                String name = student.getString("name");
-                int age = student.getInt("age");
-                String email = student.getString("email");
-                String phone = student.getString("phone");
-
-                students.add("Id: " + id + "\nName: " + name + "\nAge: " + age + "\nEmail " + email + "\nPhone: " + phone);
+                String title = student.getString("title");
+                String newsData = student.getString("newsdata");
+                String date = student.getString("date");
+                arrayList_news.add(new news(title,newsData,date));
 
             }
         } catch (JSONException e) {
@@ -113,7 +108,6 @@ public class StudentLoader extends AsyncTaskLoader<ArrayList<String>> {
             e.printStackTrace();
         }
 
-
-        return students;
+        return arrayList_news;
     }
 }
