@@ -7,6 +7,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.squareup.picasso.Picasso;
+
 public class Full_news_data extends AppCompatActivity {
     ImageView mainImage,download;
     TextView title, description,pubDate,source,source_id;
@@ -29,9 +31,21 @@ public class Full_news_data extends AppCompatActivity {
             description.setText(getIntent().getStringExtra("description"));
             pubDate.setText(getIntent().getStringExtra("pubDate"));
             news_url=getIntent().getStringExtra("link");
-           //getIntent().getStringExtra("image_url");
             source_id.setText(getIntent().getStringExtra("source_id"));
+            ///download image with Picasso
+             String imageUri = getIntent().getStringExtra("image_url");
+             ImageView ivBasicImage = (ImageView) findViewById(R.id.iv_mainImage);
+            Picasso.with(getApplicationContext()).load(imageUri).fit().centerCrop()
+                    .placeholder(R.drawable.newspaper)
+                    .error(R.drawable.newspaper)
+                    .into(ivBasicImage);
+
+
+
+
         }
+
+
 
         source_id.setOnClickListener(new View.OnClickListener() {
             @Override

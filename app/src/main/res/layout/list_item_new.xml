@@ -9,10 +9,8 @@
 
     <ImageView
         android:id="@+id/iv_image"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:padding="15dp"
-        android:layout_margin="4dp"
+        android:layout_width="205dp"
+        android:layout_height="205dp"
         android:src="@drawable/newspaper"/>
 
     <LinearLayout
