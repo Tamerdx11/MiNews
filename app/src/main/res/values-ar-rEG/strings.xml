@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mi News</string>
+    <string name="welcome">مطور بواسطه فريق ميجا</string>
+    <string name="banner">الاخبار الاكثر اهميه</string>
+    <string name="banner2">في</string>
+    <string name="banner3">تطبيق واحد</string>
+    <string name="txt_titl">العنوان</string>
+    <string name="txt_news">الاخبار</string>
+    <string name="txt_date">التاريخ</string>
+    <string name="tv_source">المصدر:</string>
+</resources>
