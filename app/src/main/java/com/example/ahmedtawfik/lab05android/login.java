@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.Locale;
+
 public class login extends AppCompatActivity {
 
     @Override
@@ -19,7 +21,7 @@ public class login extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             public void run() {
                 // Actions to do after 5 seconds
-                Intent intent=new Intent(login.this,MainActivity.class);
+                Intent intent=new Intent(login.this, categories_data.class);
                 startActivity(intent);
                 finish();
             }

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Full_news_data"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_mainImage"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:src="@drawable/image_news"></ImageView>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="title"
+        android:textSize="40dp"
+        style="@style/customStyle"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/black"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="title"
+            style="@style/customStyle"
+            android:layout_gravity="left"
+            android:textStyle="bold"
+            android:text="@string/tv_source"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/tv_source_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="title"
+            style="@style/customStyle"
+            android:layout_gravity="left"
+            android:textColor="@color/blue"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/layout_news"
+        android:hint="@string/txt_news"
+        android:textSize="20sp"
+        android:padding="15dp"
+        android:layout_margin="10dp"></TextView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#FF9800">
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="45dp"
+            android:padding="5dp"
+            android:textSize="17dp"
+            android:textStyle="italic"
+            android:textColor="@color/black"
+            ></TextView>
+
+        <ImageView
+            android:id="@+id/iv_download"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="45dp"
+            android:padding="5dp"
+            android:layout_margin="1dp"
+            android:src="@drawable/download"></ImageView>
+
+    </LinearLayout>
+
+</LinearLayout>

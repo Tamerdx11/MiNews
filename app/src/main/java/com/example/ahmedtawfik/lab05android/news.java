@@ -6,16 +6,38 @@ public class news {
     private String dataNews;
     private String date;
     private String newsImage;
+    private String link;
+    private String source_id;
 
-    public news() {
+    public news() { }
 
+    public news(String title, String description, String pubDate,String link, String image_url, String source_id) {
+        this.title=title;
+        this.dataNews=description;
+        this.date=pubDate;
+        this.link=link;
+        this.newsImage=image_url;
+        this.source_id=source_id;
     }
 
-    public news(String title, String dataNews, String date/*, String newsImage*/) {
-        this.title=title;
-        this.dataNews=dataNews;
-        this.date=date;
-        this.newsImage=newsImage;
+    public String getNewsImage() {
+        return newsImage;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
+
+    public String getSource_id() {
+        return source_id;
+    }
+
+    public void setSource_id(String source_id) {
+        this.source_id = source_id;
     }
 
     public String getTitle() {
@@ -34,11 +56,11 @@ public class news {
         this.dataNews=dataNews;
     }
 
-  /*  public String getNewsImg() {
+   public String getNewsImg() {
         return newsImage;
     }
 
-    public void setNewsImage(String newsImage) { this.newsImage=newsImage; }*/
+    public void setNewsImage(String newsImage) { this.newsImage=newsImage; }
 
     public String getDate() { return date; }
 

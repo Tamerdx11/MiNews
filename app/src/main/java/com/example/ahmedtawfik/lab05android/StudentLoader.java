@@ -89,16 +89,19 @@ public class StudentLoader extends AsyncTaskLoader<ArrayList<news>> {
         try {
             jsonRoot = new JSONObject(getHttpRequest(new URL(url)));
 
-            JSONArray jsonArray = jsonRoot.getJSONArray("students");
+            JSONArray jsonArray = jsonRoot.getJSONArray("results");
 
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject student = jsonArray.getJSONObject(i);
 
                 String title = student.getString("title");
-                String newsData = student.getString("newsdata");
-                String date = student.getString("date");
-                arrayList_news.add(new news(title,newsData,date));
+                String description = student.getString("description");
+                String pubDate = student.getString("pubDate");
+                String link=student.getString("link");
+                String image_url=student.getString("image_url");
+                String source_id=student.getString("source_id");
 
+                arrayList_news.add(new news(title,description,pubDate,link,image_url,source_id));
             }
         } catch (JSONException e) {
             e.printStackTrace();

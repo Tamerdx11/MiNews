@@ -16,7 +16,6 @@ public class NewsAdapter extends ArrayAdapter<news> {
         super(context, 0, users);
     }
 
-
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
@@ -30,9 +29,6 @@ public class NewsAdapter extends ArrayAdapter<news> {
 
         TextView tv_title=currentListView.findViewById(R.id.tv_item_title);
         tv_title.setText(currentUser.getTitle());
-
-        TextView tv_item_news=currentListView.findViewById(R.id.tv_item_news);
-        tv_item_news.setText(currentUser.getDataNews());
 
         TextView tv_item_date=currentListView.findViewById(R.id.tv_item_date);
         tv_item_date.setText(currentUser.getDate());

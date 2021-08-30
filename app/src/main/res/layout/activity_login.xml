@@ -5,7 +5,7 @@
     tools:context=".login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/mycolor"
+    android:background="@drawable/w11"
     android:orientation="vertical">
 
     <ImageView
@@ -21,19 +21,27 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="@string/banner"
-        android:textColor="@color/black"
+        android:textColor="#FF5722"
         android:textStyle="bold"
-        android:textSize="25sp" />
+        android:textSize="35sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/banner2"
+        android:textColor="#FF5722"
+        android:textStyle="bold"
+        android:textSize="35sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:layout_gravity="center_horizontal"
-        android:text="@string/ban"
-        android:textColor="@color/black"
+        android:text="@string/banner3"
+        android:textColor="#F44336"
         android:textStyle="bold"
-        android:textSize="25sp" />
+        android:textSize="35sp" />
 
 
     <ProgressBar
