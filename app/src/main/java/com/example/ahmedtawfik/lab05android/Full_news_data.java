@@ -1,5 +1,7 @@
 package com.example.ahmedtawfik.lab05android;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +15,8 @@ public class Full_news_data extends AppCompatActivity {
     ImageView mainImage,download;
     TextView title, description,pubDate,source,source_id;
     private String news_url;
+    ///
+    private static String title_d,description_d,pubDate_d;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,26 +44,34 @@ public class Full_news_data extends AppCompatActivity {
                     .error(R.drawable.newspaper)
                     .into(ivBasicImage);
 
+            ///// press to source:(/* button */) show data in (Google)
+            source_id.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    gotoUrl(news_url = getIntent().getStringExtra("link"));
+                }
+                private void gotoUrl(String s) {
+                    Uri uri = Uri.parse(s);
+                    startActivity(new Intent(Intent.ACTION_VIEW, uri));
+                }
+            });
 
-
-
+            ///data for downloading
+            title_d=getIntent().getStringExtra("title");
+            description_d=getIntent().getStringExtra("description");
+            pubDate_d=getIntent().getStringExtra("pubDate");
         }
-
-
-
-        source_id.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-
 
         download.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 download.setImageResource(R.drawable.downloaded);
                 Toast.makeText(getApplicationContext(),"Downloaded success.",Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(Full_news_data.this,Downloaded_data.class);
+                intent.putExtra("title", title_d);
+                intent.putExtra("description", description_d);
+                intent.putExtra("pubDate",pubDate_d );
+                startActivity(intent);
             }
         });
     }

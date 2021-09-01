@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         if(getIntent()!=null){
-            URL=getIntent().getStringExtra("URL");
+            URL = getIntent().getStringExtra("URL");
         }
         lv_news = findViewById(R.id.lv_news);
         progressBar = findViewById(R.id.pb_progress);
@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     @Override
     public Loader<ArrayList<news>> onCreateLoader(int i, @Nullable Bundle bundle) {
         progressBar.setVisibility(View.VISIBLE);
+
         return new StudentLoader(MainActivity.this, URL);
     }
 

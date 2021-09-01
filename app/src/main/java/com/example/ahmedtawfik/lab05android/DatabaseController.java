@@ -18,7 +18,7 @@ public class DatabaseController {
         database=databaseHelper.getWritableDatabase();
     }
 
-    public long insertdetails(String title,String description,String link){
+    public long insertDetails(String title,String description,String link){
         ContentValues values=new ContentValues();
         values.put(DatabaseHelper.TABLE01_COL02,title);
         values.put(DatabaseHelper.TABLE01_COL03,description);
@@ -33,7 +33,7 @@ public class DatabaseController {
 
     }
 
-    public int deletedetails(int id,String title,String description,String link){
+    public int deletedetails(int id){
 
         return database.delete(DatabaseHelper.TABLE01_NAME,DatabaseHelper.TABLE01_COL01+"="+id,null);
 
@@ -53,7 +53,7 @@ public class DatabaseController {
         return  cursorToSource(cursor);
     }
 
-    public ArrayList<Details> selectdetails(int id){
+    public ArrayList<Details> selectdetails(){
         ArrayList<Details> details=new ArrayList<>();
         Cursor cursor=database.query(DatabaseHelper.TABLE01_NAME,new String[]{DatabaseHelper.TABLE01_COL01,DatabaseHelper.TABLE01_COL02,DatabaseHelper.TABLE01_COL03,DatabaseHelper.TABLE01_COL04},null,null,null,null,null);
         cursor.moveToFirst();

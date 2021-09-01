@@ -51,9 +51,8 @@ package com.example.ahmedtawfik.lab05android;public class Details {
 
     @Override
     public String toString() {
-        return "details{" +
-                "title='" + title + '\'' +
-                ", description='" + description + '\'' +
+        return title + '\'' +"\n \n "+
+                  description + '\'' +
                 '}';
     }
 }

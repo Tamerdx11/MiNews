@@ -76,7 +76,8 @@ public class categories_data extends AppCompatActivity {
         downloads.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent=new Intent(categories_data.this,Downloaded_data.class);
+                startActivity(intent);
             }
         });
     }

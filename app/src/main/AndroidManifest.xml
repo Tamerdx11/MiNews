@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Full_news_data"></activity>
+        <activity android:name=".Downloaded_data"></activity>
+        <activity android:name=".Full_news_data"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity android:name=".categories_data" />
         <activity android:name=".MainActivity" />
         <activity android:name=".login">
