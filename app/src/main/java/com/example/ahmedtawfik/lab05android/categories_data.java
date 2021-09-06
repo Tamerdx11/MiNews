@@ -14,7 +14,24 @@ public class categories_data extends AppCompatActivity {
     private static String NEWS_BUSINESS_EG="https://newsdata.io/api/1/news?apikey=pub_1021e64c7f637d7610845ede96633b0f4151&category=business&country=eg";
     private static String NEWS_SCIENCE_EG="https://newsdata.io/api/1/news?apikey=pub_1021e64c7f637d7610845ede96633b0f4151&category=science&country=eg";
     private static String NEWS_HEALTH_EG="https://newsdata.io/api/1/news?apikey=pub_1021e64c7f637d7610845ede96633b0f4151&category=health&country=eg";
+    //////Countries
+    //Egypt="eg"
+    // United States="us"
+    //India ="in"
+    // Japan="jp"
+    // The United Arab Emirates="ae"
+    // Saudi Arabia="sa"
 
+    ////Categories
+   // top
+    // business
+    // science
+    // technology
+    // sports
+    // health
+    // entertainment
+
+    final private static String url=NEWS_EG+"&category=health&country=eg";
     ImageView health, top, sports, sciences, business, downloads;
 
     @Override
@@ -32,7 +49,7 @@ public class categories_data extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(categories_data.this,MainActivity.class);
-                intent.putExtra("URL",NEWS_HEALTH_EG);
+                intent.putExtra("URL",url);
                 startActivity(intent);
 
             }

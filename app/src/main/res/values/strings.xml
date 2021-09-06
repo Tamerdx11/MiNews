@@ -8,5 +8,23 @@
     <string name="txt_news">News</string>
     <string name="txt_date">Date</string>
     <string name="tv_source">"Source: "</string>
+    <string name="health">Health</string>
+    <string name="search_hint">search</string>
+    <string name="tv_categories"> Customize ⬇️</string>
+    <string name="tv_categories2"> ⬆️️</string>
+    <string name="txt_top">Top News</string>
+    <string name="txt_health">Health News</string>
+    <string name="txt_sport">Sport News</string>
+    <string name="txt_business">Business</string>
+    <string name="txt_entertainment">Entertainment</string>
+    <string name="txt_technology">Technology</string>
+    <string name="txt_science">Science News</string>
+    <string name="txt_counteries">Counteries</string>
+    <string name="txt_eg">Egypt</string>
+    <string name="txt_us">United States</string>
+    <string name="txt_in">India</string>
+    <string name="txt_jp">Japan</string>
+    <string name="txt_ae"> Emirates</string>
+    <string name="txt_sa">Saudi Arabia</string>
 
 </resources>

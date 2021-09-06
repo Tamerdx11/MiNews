@@ -12,23 +12,74 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<ArrayList<news>> {
+    private static int visibility_country=0, visibility_categories=0;
 
+    LinearLayout ll_countries,ll_categories;
+    ImageView iv_country;
+    TextView tv_categories;
     ListView lv_news;
     ProgressBar progressBar;
     private String URL;
-    static ArrayList<news> arrayList_news = new ArrayList<>();
+
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        iv_country=findViewById(R.id.iv_country);
+        tv_categories=findViewById(R.id.tv_categories);
+        ll_countries=findViewById(R.id.ll_countries);
+        ll_categories=findViewById(R.id.ll_categories);
+        ////////countries_visibility
+        iv_country.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(visibility_country==0){
+                    ll_countries.setVisibility(View.VISIBLE);
+                visibility_country=1;
+                }
+                else{
+                    ll_countries.setVisibility(View.GONE);
+                    visibility_country=0;
+                }
+
+            }
+        });
+        //////////categories_visibility
+        tv_categories.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(visibility_categories==0){
+                    ll_categories.setVisibility(View.VISIBLE);
+                    visibility_categories=1;
+                    tv_categories.setText(R.string.tv_categories2);
+                }
+                else{
+                    if(visibility_country==1){
+                        visibility_country=0;
+                        ll_countries.setVisibility(View.GONE);
+                    }
+                    ll_categories.setVisibility(View.GONE);
+                    visibility_categories=0;
+                    tv_categories.setText(R.string.tv_categories);
+                }
+
+            }
+        });
+
+
+
+
         if(getIntent()!=null){
             URL = getIntent().getStringExtra("URL");
         }

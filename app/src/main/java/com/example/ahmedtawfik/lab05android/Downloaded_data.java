@@ -34,7 +34,6 @@ public class Downloaded_data extends AppCompatActivity {
         DbController.open();
         final ArrayAdapter<String> adapter=new ArrayAdapter<>(getApplicationContext(),R.layout.list_item_download,news_d);
         lv_download.setAdapter(adapter);
-
         ///get intent
         if(getIntent()!=null){
             title=getIntent().getStringExtra("title");
@@ -59,7 +58,7 @@ public class Downloaded_data extends AppCompatActivity {
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(Downloaded_data.this);
 
-                builder.setTitle("Confirmation Dialog").setMessage("Would you like to delete " + DbController.selectdetails().get(position).getLink());
+                builder.setTitle("Confirmation Dialog").setMessage("Would you like to delete " + DbController.selectdetails().get(position).getTitle());
 
                 builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     @Override
