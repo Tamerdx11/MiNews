@@ -28,35 +28,35 @@ public class login extends AppCompatActivity {
             public void run() {
                 // Actions to do after 5 seconds
                 imageView.setImageResource(R.drawable.start2);
-                textView.setText("Sport");
+                textView.setText(R.string.sport);
             }
         }, 3000);
         handler.postDelayed(new Runnable() {
             public void run() {
                 // Actions to do after 5 seconds
                 imageView.setImageResource(R.drawable.start3);
-                textView.setText("Entertainments");
+                textView.setText(R.string.entertainments);
             }
         }, 4000);
         handler.postDelayed(new Runnable() {
             public void run() {
                 // Actions to do after 5 seconds
                 imageView.setImageResource(R.drawable.start4);
-                textView.setText("Business");
+                textView.setText(R.string.business);
             }
         }, 5000);
         handler.postDelayed(new Runnable() {
             public void run() {
                 // Actions to do after 5 seconds
                 imageView.setImageResource(R.drawable.start5);
-                textView.setText("Top News");
+                textView.setText(R.string.top_News);
             }
         }, 6000);
         handler.postDelayed(new Runnable() {
             public void run() {
                 // Actions to do after 5 seconds
                 imageView.setImageResource(R.drawable.sss);
-                textView.setText("In One App");
+                textView.setText(R.string.In_One_App);
             }
         }, 7000);
 

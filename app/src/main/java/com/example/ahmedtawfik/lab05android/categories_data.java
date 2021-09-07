@@ -8,8 +8,8 @@ import android.widget.ImageView;
 
 public class categories_data extends AppCompatActivity {
 
-    private static String NEWS_EG ="https://newsdata.io/api/1/news?apikey=pub_1021e64c7f637d7610845ede96633b0f4151";
-    private static String NEWS_SPORTS_EG="https://newsdata.io/api/1/news?apikey=pub_1021e64c7f637d7610845ede96633b0f4151&category=sports&country=eg";
+    public static String NEWS_EG ="https://newsdata.io/api/1/news?apikey=pub_1021e64c7f637d7610845ede96633b0f4151";
+    public static String NEWS_SPORTS_EG="https://newsdata.io/api/1/news?apikey=pub_1021e64c7f637d7610845ede96633b0f4151&category=sports&country=eg";
     private static String NEWS_TOP_EG="https://newsdata.io/api/1/news?apikey=pub_1021e64c7f637d7610845ede96633b0f4151&category=top&country=eg";
     private static String NEWS_BUSINESS_EG="https://newsdata.io/api/1/news?apikey=pub_1021e64c7f637d7610845ede96633b0f4151&category=business&country=eg";
     private static String NEWS_SCIENCE_EG="https://newsdata.io/api/1/news?apikey=pub_1021e64c7f637d7610845ede96633b0f4151&category=science&country=eg";

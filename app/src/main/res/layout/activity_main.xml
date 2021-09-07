@@ -13,14 +13,17 @@
         android:layout_height="56dp"
         android:layout_margin="5dp"
         android:orientation="horizontal">
+
         <EditText
+            android:id="@+id/ed_search"
             android:layout_width="0dp"
-            android:layout_weight="4"
-            android:layout_height="50dp"
-            android:hint="@string/search_hint"
-            android:paddingLeft="11dp"
+            android:layout_height="34dp"
             android:layout_margin="3dp"
-            android:background="@drawable/seach5"/>
+            android:layout_weight="4"
+            android:background="@drawable/seach5"
+            android:hint="@string/search_hint"
+            android:paddingLeft="11dp" />
+
         <ImageView
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -77,7 +80,7 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="@string/txt_top"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:paddingLeft="12dp"
                 android:textColor="@color/black"></TextView>
             <TextView
@@ -85,7 +88,7 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="@string/txt_health"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:paddingLeft="3dp"
                 android:textColor="@color/black"></TextView>
             <TextView
@@ -93,7 +96,7 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="@string/txt_sport"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:paddingLeft="8dp"
                 android:textColor="@color/black"></TextView>
             <TextView
@@ -101,7 +104,7 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="@string/txt_business"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:paddingLeft="15dp"
                 android:textColor="@color/black"></TextView>
         </LinearLayout>
@@ -142,7 +145,7 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="@string/txt_entertainment"
-                android:textSize="15sp"
+                android:textSize="14sp"
                 android:paddingLeft="0dp"
                 android:textColor="@color/black"></TextView>
             <TextView
@@ -150,7 +153,7 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="@string/txt_technology"
-                android:textSize="15sp"
+                android:textSize="14sp"
                 android:paddingLeft="11dp"
                 android:textColor="@color/black"></TextView>
             <TextView
@@ -158,7 +161,7 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="@string/txt_science"
-                android:textSize="15sp"
+                android:textSize="14sp"
                 android:paddingLeft="3dp"
                 android:textColor="@color/black"></TextView>
             <TextView
@@ -166,7 +169,7 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="@string/txt_counteries"
-                android:textSize="15sp"
+                android:textSize="14sp"
                 android:paddingLeft="15dp"
                 android:textColor="@color/black"></TextView>
         </LinearLayout>
@@ -191,7 +194,7 @@
                 android:text="@string/txt_eg"
                 android:textColor="@color/blue"
                 android:paddingLeft="20dp"
-                android:textSize="20sp"></TextView>
+                android:textSize="18sp"></TextView>
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -207,7 +210,7 @@
                 android:text="@string/txt_in"
                 android:textColor="@color/blue"
                 android:paddingLeft="20dp"
-                android:textSize="20sp"></TextView>
+                android:textSize="18sp"></TextView>
         </LinearLayout>
 
         <LinearLayout
@@ -221,7 +224,7 @@
                 android:text="@string/txt_jp"
                 android:textColor="@color/blue"
                 android:paddingLeft="20dp"
-                android:textSize="20sp"></TextView>
+                android:textSize="18sp"></TextView>
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -229,7 +232,7 @@
                 android:text="@string/txt_sa"
                 android:textColor="@color/blue"
                 android:paddingLeft="2dp"
-                android:textSize="20sp"></TextView>
+                android:textSize="18sp"></TextView>
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -237,7 +240,7 @@
                 android:text="@string/txt_ae"
                 android:textColor="@color/blue"
                 android:paddingLeft="20dp"
-                android:textSize="20sp"></TextView>
+                android:textSize="18sp"></TextView>
 
         </LinearLayout>
 

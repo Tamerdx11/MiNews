@@ -8,10 +8,15 @@ import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.SearchView;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -19,7 +24,17 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.text.BreakIterator;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.ResourceBundle;
 
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<ArrayList<news>> {
     private static int visibility_country=0, visibility_categories=0;
@@ -29,8 +44,12 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     TextView tv_categories;
     ListView lv_news;
     ProgressBar progressBar;
-    private String URL;
+    EditText search;
+    StudentLoader obj;
+    categories_data obj1;
 
+    List<news> filter=new ArrayList<>();
+    private String URL;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -40,6 +59,12 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         tv_categories=findViewById(R.id.tv_categories);
         ll_countries=findViewById(R.id.ll_countries);
         ll_categories=findViewById(R.id.ll_categories);
+        search=findViewById(R.id.ed_search);
+
+        if (getTitle()!=null)
+        {
+
+        }
         ////////countries_visibility
         iv_country.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,6 +115,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         loaderManager.initLoader(0, null, MainActivity.this).forceLoad();
 
     }
+
+
 
     @NonNull
     @Override

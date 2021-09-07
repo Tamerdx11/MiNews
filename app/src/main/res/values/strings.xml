@@ -26,5 +26,11 @@
     <string name="txt_jp">Japan</string>
     <string name="txt_ae"> Emirates</string>
     <string name="txt_sa">Saudi Arabia</string>
+    <string name="sport">Sport</string>
+    <string name="entertainments">Entertainments</string>
+    <string name="business">Business</string>
+    <string name="Top">Top News</string>
+    <string name="top_News">Top News</string>
+    <string name="In_One_App">\"In One App\"</string>
 
 </resources>
