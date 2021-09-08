@@ -5,24 +5,42 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:layout_margin="5dp"
+    android:layout_margin="0dp"
+    android:background="@drawable/wal_main"
     android:padding="3dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_margin="5dp"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/ed_search"
+        android:orientation="horizontal"
+        android:background="@drawable/layout_news">
+        <ImageView
             android:layout_width="0dp"
-            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
             android:layout_margin="3dp"
+            android:padding="1dp"
+            android:src="@drawable/in_home"></ImageView>
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_weight="4"
-            android:background="@drawable/seach5"
-            android:hint="@string/search_hint"
-            android:paddingLeft="11dp" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/layout_news"
+            android:layout_margin="10dp">
+            <EditText
+                android:id="@+id/ed_search"
+                android:layout_width="190dp"
+                android:textSize="15sp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/search_hint" />
+        </LinearLayout>
+
+
+
 
         <ImageView
             android:layout_width="0dp"
@@ -35,15 +53,23 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="50dp"
+            android:padding="4dp"
             android:layout_margin="3dp"
-            android:src="@drawable/saved"/>
+            android:src="@drawable/likes_unclick"/>
     </LinearLayout>
+
+
     <LinearLayout
         android:id="@+id/ll_categories"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="206dp"
         android:orientation="vertical"
-        android:background="#DAA5E3"
+        android:background="@drawable/layout_news"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginBottom="1dp"
+        android:padding="20dp"
         android:visibility="gone">
         <LinearLayout
             android:layout_width="wrap_content"
@@ -53,27 +79,31 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="60dp"
+                android:layout_margin="2dp"
                 android:src="@drawable/top1"/>
             <ImageView
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="60dp"
+                android:layout_margin="2dp"
                 android:src="@drawable/health1"/>
             <ImageView
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="60dp"
+                android:layout_margin="2dp"
                 android:src="@drawable/sport1"/>
             <ImageView
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="60dp"
+                android:layout_margin="2dp"
                 android:src="@drawable/business1"/>
 
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="20dp"
             android:orientation="horizontal">
             <TextView
                 android:layout_width="0dp"
@@ -82,7 +112,9 @@
                 android:text="@string/txt_top"
                 android:textSize="14sp"
                 android:paddingLeft="12dp"
-                android:textColor="@color/black"></TextView>
+                android:paddingRight="12dp"
+                android:textStyle="bold"
+                android:textColor="@color/BLUE"></TextView>
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -90,6 +122,8 @@
                 android:text="@string/txt_health"
                 android:textSize="14sp"
                 android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:textStyle="bold"
                 android:textColor="@color/black"></TextView>
             <TextView
                 android:layout_width="0dp"
@@ -97,7 +131,9 @@
                 android:layout_height="wrap_content"
                 android:text="@string/txt_sport"
                 android:textSize="14sp"
-                android:paddingLeft="8dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textStyle="bold"
                 android:textColor="@color/black"></TextView>
             <TextView
                 android:layout_width="0dp"
@@ -105,7 +141,9 @@
                 android:layout_height="wrap_content"
                 android:text="@string/txt_business"
                 android:textSize="14sp"
-                android:paddingLeft="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textStyle="bold"
                 android:textColor="@color/black"></TextView>
         </LinearLayout>
 
@@ -117,28 +155,32 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="60dp"
+                android:layout_margin="2dp"
                 android:src="@drawable/entertainment1"/>
             <ImageView
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="60dp"
+                android:layout_margin="2dp"
                 android:src="@drawable/technology1"/>
             <ImageView
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="60dp"
+                android:layout_margin="2dp"
                 android:src="@drawable/science1"/>
             <ImageView
                 android:id="@+id/iv_country"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="60dp"
+                android:layout_margin="2dp"
                 android:src="@drawable/country"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="20dp"
             android:orientation="horizontal">
             <TextView
                 android:layout_width="0dp"
@@ -146,7 +188,9 @@
                 android:layout_height="wrap_content"
                 android:text="@string/txt_entertainment"
                 android:textSize="14sp"
-                android:paddingLeft="0dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:textStyle="bold"
                 android:textColor="@color/black"></TextView>
             <TextView
                 android:layout_width="0dp"
@@ -154,7 +198,9 @@
                 android:layout_height="wrap_content"
                 android:text="@string/txt_technology"
                 android:textSize="14sp"
-                android:paddingLeft="11dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textStyle="bold"
                 android:textColor="@color/black"></TextView>
             <TextView
                 android:layout_width="0dp"
@@ -162,16 +208,22 @@
                 android:layout_height="wrap_content"
                 android:text="@string/txt_science"
                 android:textSize="14sp"
-                android:paddingLeft="3dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textStyle="bold"
                 android:textColor="@color/black"></TextView>
+
             <TextView
+                android:id="@+id/txt_countries"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="@string/txt_counteries"
-                android:textSize="14sp"
+                android:layout_weight="1"
                 android:paddingLeft="15dp"
-                android:textColor="@color/black"></TextView>
+                android:paddingRight="15dp"
+                android:text="@string/txt_counteries"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="14sp"></TextView>
         </LinearLayout>
     </LinearLayout>
 
@@ -180,9 +232,11 @@
         android:id="@+id/ll_countries"
         android:visibility="gone"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="65dp"
         android:orientation="vertical"
-        android:background="#EDE27B">
+        android:layout_margin="3dp"
+        android:padding="6dp"
+        android:background="@drawable/layout_news">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -190,26 +244,32 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"
+                android:layout_height="25dp"
                 android:text="@string/txt_eg"
-                android:textColor="@color/blue"
-                android:paddingLeft="20dp"
+                android:textColor="@color/BLUE"
+                android:textStyle="bold"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
                 android:textSize="18sp"></TextView>
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="@string/txt_us"
-                android:textColor="@color/blue"
-                android:paddingLeft="2dp"
-                android:textSize="20sp"></TextView>
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:textSize="18sp"></TextView>
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="@string/txt_in"
-                android:textColor="@color/blue"
-                android:paddingLeft="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
                 android:textSize="18sp"></TextView>
         </LinearLayout>
 
@@ -222,38 +282,69 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="@string/txt_jp"
-                android:textColor="@color/blue"
-                android:paddingLeft="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
                 android:textSize="18sp"></TextView>
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="@string/txt_sa"
-                android:textColor="@color/blue"
-                android:paddingLeft="2dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
                 android:textSize="18sp"></TextView>
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="@string/txt_ae"
-                android:textColor="@color/blue"
-                android:paddingLeft="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
                 android:textSize="18sp"></TextView>
-
         </LinearLayout>
 
     </LinearLayout>
 
-
-
-
     <TextView
         android:id="@+id/tv_categories"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="94dp"
+        android:layout_height="25dp"
+        android:background="@drawable/layout_news"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
         android:text="@string/tv_categories"></TextView>
+
+    <LinearLayout
+        android:id="@+id/ll_no_internet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            android:src="@drawable/no_internet_icon"
+            ></ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="25sp"
+            android:text="@string/no_internet"></TextView>
+
+
+    </LinearLayout>
 
     <ProgressBar
         android:id="@+id/pb_progress"

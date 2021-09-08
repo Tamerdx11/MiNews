@@ -40,8 +40,8 @@ public class Full_news_data extends AppCompatActivity {
              String imageUri = getIntent().getStringExtra("image_url");
              ImageView ivBasicImage = (ImageView) findViewById(R.id.iv_mainImage);
             Picasso.with(getApplicationContext()).load(imageUri).fit().centerCrop()
-                    .placeholder(R.drawable.newspaper)
-                    .error(R.drawable.newspaper)
+                    .placeholder(R.drawable.news_icon2)
+                    .error(R.drawable.news_icon2)
                     .into(ivBasicImage);
 
             ///// press to source:(/* button */) show data in (Google)

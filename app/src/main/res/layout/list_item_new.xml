@@ -1,44 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_height="250dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/layout_news"
     android:layout_margin="10dp"
     android:orientation="horizontal">
 
-    <ImageView
-        android:id="@+id/iv_image"
-        android:layout_width="205dp"
-        android:layout_height="205dp"
-        android:src="@drawable/newspaper"/>
+    <LinearLayout
+        android:layout_width="210dp"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:layout_height="250dp"
+        android:layout_margin="3dp">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="200dp"
+            android:layout_height="140dp"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="30dp">
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_width="200dp"
+                android:layout_height="140dp"
+                android:src="@drawable/mi_icon8"/>
+        </android.support.v7.widget.CardView>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="25dp"
+    android:orientation="horizontal"
+    android:layout_margin="3dp"
+    android:background="@drawable/layout_news">
+    <TextView
+        android:textColor="@color/black"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_gravity="end"
+        android:textSize="14sp"
+        android:padding="3dp"
+        android:text="@string/txt_date_show"/>
+    <TextView
+        android:id="@+id/tv_item_date"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_gravity="end"
+        android:textSize="10sp"
+        android:padding="6dp"
+        android:text="@string/txt_date"/>
+
+
+</LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:orientation="horizontal"
+            android:layout_margin="3dp"
+            android:background="@drawable/layout_news">
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_gravity="end"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:padding="3dp"
+                android:text="@string/tv_source"/>
+            <TextView
+                android:id="@+id/tv_item_source"
+                android:textColor="@color/blue"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_gravity="end"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                android:padding="4dp"
+                android:text="@string/txt_source"/>
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="30dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/unlove"></ImageView>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_weight="1"
         android:orientation="vertical"
-        android:layout_height="200dp">
+        android:layout_height="250dp">
 
         <TextView
             android:id="@+id/tv_item_title"
-            style="@style/customStyle"
             android:textStyle="bold"
-            android:textColor="@color/colorPrimary"
+            android:textColor="#9C27B0"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:textSize="14sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_margin="10dp"
             android:text="@string/txt_titl"/>
-
         <TextView
-            android:id="@+id/tv_item_date"
-            style="@style/customStyle"
-            android:textColor="@android:color/black"
+            android:id="@+id/tv_item_description"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_margin="8dp"
+            android:layout_height="100dp"
             android:padding="3dp"
-            android:text="@string/txt_date"/>
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_margin="10dp"
+            android:textSize="10sp"
+            android:background="@drawable/layout_news"
+            android:text="@string/txt_description"
+            ></TextView>
 
     </LinearLayout>
 

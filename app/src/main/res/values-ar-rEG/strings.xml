@@ -2,17 +2,14 @@
 <resources>
     <string name="app_name">Mi News</string>
     <string name="welcome">مطور بواسطه فريق ميجا</string>
-    <string name="banner">الاخبار الاكثر اهميه</string>
-    <string name="banner2">في</string>
-    <string name="banner3">تطبيق واحد</string>
     <string name="txt_titl">العنوان</string>
     <string name="txt_news">الاخبار</string>
     <string name="txt_date">التاريخ</string>
     <string name="tv_source">المصدر:</string>
     <string name="health">الصحه</string>
     <string name="search_hint">البحث</string>
-    <string name="tv_categories2">" ⬆️️"</string>
-    <string name="txt_top">الاخبار المهمه</string>
+    <string name="tv_categories2"> تخصيص ⬆️️</string>
+    <string name="txt_top">المتصدرة</string>
     <string name="txt_health">اخبار الصحه</string>
     <string name="txt_sport">اخبار الرياضه</string>
     <string name="txt_business">التجاره</string>
@@ -27,10 +24,13 @@
     <string name="txt_ae">الامارات</string>
     <string name="txt_sa">السعوديه</string>
     <string name="sport">الرياضه</string>
-    <string name="entertainments">الترفيه</string>
-    <string name="business">التجاره</string>
-    <string name="Top">الاخبار المهمه</string>
+    <string name="entertainments">الفن</string>
+    <string name="business">الاقتصاد</string>
     <string name="top_News">الاخبار المهمه</string>
-    <string name="In_One_App">في برنامج واحد</string>
-    <string name="tv_categories">التخصص ⬇️</string>
+    <string name="In_One_App">في تطبيق واحد</string>
+    <string name="tv_categories">تخصيص ⬇️</string>
+    <string name="no_internet">لا يوجد انترنت</string>
+    <string name="txt_description">الوصف</string>
+    <string name="txt_source">المصدر</string>
+    <string name="txt_date_show">تاريخ:</string>
 </resources>

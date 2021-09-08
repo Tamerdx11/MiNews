@@ -1,25 +1,22 @@
 <resources>
     <string name="app_name">Mi News</string>
     <string name="welcome">Created by Mega team</string>
-    <string name="banner">More Important News </string>
-    <string name="banner2"> In </string>
-    <string name="banner3">One App</string>
     <string name="txt_titl">Title</string>
     <string name="txt_news">News</string>
     <string name="txt_date">Date</string>
-    <string name="tv_source">"Source: "</string>
+    <string name="tv_source">Source: </string>
     <string name="health">Health</string>
     <string name="search_hint">search</string>
     <string name="tv_categories"> Customize ⬇️</string>
-    <string name="tv_categories2"> ⬆️️</string>
-    <string name="txt_top">Top News</string>
-    <string name="txt_health">Health News</string>
-    <string name="txt_sport">Sport News</string>
+    <string name="tv_categories2"> Customize⬆️</string>
+    <string name="txt_top">Top</string>
+    <string name="txt_health">Health</string>
+    <string name="txt_sport">Sports</string>
     <string name="txt_business">Business</string>
-    <string name="txt_entertainment">Entertainment</string>
+    <string name="txt_entertainment">ِArts</string>
     <string name="txt_technology">Technology</string>
-    <string name="txt_science">Science News</string>
-    <string name="txt_counteries">Counteries</string>
+    <string name="txt_science">Science</string>
+    <string name="txt_counteries">Country</string>
     <string name="txt_eg">Egypt</string>
     <string name="txt_us">United States</string>
     <string name="txt_in">India</string>
@@ -29,8 +26,11 @@
     <string name="sport">Sport</string>
     <string name="entertainments">Entertainments</string>
     <string name="business">Business</string>
-    <string name="Top">Top News</string>
     <string name="top_News">Top News</string>
     <string name="In_One_App">\"In One App\"</string>
+    <string name="no_internet">No Internet!</string>
+    <string name="txt_description">Description</string>
+    <string name="txt_source">Source</string>
+    <string name="txt_date_show">"Date: "</string>
 
 </resources>
