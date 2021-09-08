@@ -28,7 +28,6 @@ public class NewsAdapter extends ArrayAdapter<news> {
         if (currentListView == null) {
             currentListView = LayoutInflater.from(getContext()).inflate(R.layout.list_item_new, parent, false);
         }
-
         news currentUser = getItem(position);
 
         TextView tv_title=currentListView.findViewById(R.id.tv_item_title);
@@ -43,6 +42,8 @@ public class NewsAdapter extends ArrayAdapter<news> {
         TextView tv_item_source=currentListView.findViewById(R.id.tv_item_source);
         tv_item_source.setText(currentUser.getSource_id());
 
+        ImageView iv_save=currentListView.findViewById(R.id.iv_save);
+        iv_save.setImageResource(currentUser.getIv());
 
         ///download image with Picasso
         String imageUri = currentUser.getNewsImage();

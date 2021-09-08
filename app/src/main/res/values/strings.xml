@@ -32,5 +32,9 @@
     <string name="txt_description">Description</string>
     <string name="txt_source">Source</string>
     <string name="txt_date_show">"Date: "</string>
+    <string name="More_Details">More Details</string>
+    <string name="Save">Save( ❤ ) </string>
+    <string name="unSave">un save( ❌ ) </string>
+    <string name="Cancel">Cancel</string>
 
 </resources>

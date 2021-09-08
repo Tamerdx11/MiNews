@@ -23,6 +23,7 @@ import javax.net.ssl.HttpsURLConnection;
 public class StudentLoader extends AsyncTaskLoader<ArrayList<news>> {
 
     String url = null;
+    int i=0;
     ArrayList<news> arrayList_news = new ArrayList<>();
 
     public StudentLoader(@NonNull Context context, String url) {
@@ -56,7 +57,6 @@ public class StudentLoader extends AsyncTaskLoader<ArrayList<news>> {
                 inputStream.close();
         }
 
-
         return jsonResponse;
     }
 
@@ -83,7 +83,6 @@ public class StudentLoader extends AsyncTaskLoader<ArrayList<news>> {
     @Override
     public ArrayList<news> loadInBackground() {
 
-
         JSONObject jsonRoot = null;
 
         try {
@@ -101,7 +100,7 @@ public class StudentLoader extends AsyncTaskLoader<ArrayList<news>> {
                 String image_url=student.getString("image_url");
                 String source_id=student.getString("source_id");
 
-                arrayList_news.add(new news(title,description,pubDate,link,image_url,source_id));
+                    arrayList_news.add(new news(title,description,pubDate,link,image_url,source_id,R.drawable.unlove));
             }
         } catch (JSONException e) {
             e.printStackTrace();

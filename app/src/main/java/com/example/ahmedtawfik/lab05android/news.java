@@ -1,5 +1,7 @@
 package com.example.ahmedtawfik.lab05android;
 
+import android.widget.ImageView;
+
 public class news {
 
     private String title;
@@ -8,16 +10,26 @@ public class news {
     private String newsImage;
     private String link;
     private String source_id;
+    int iv;
 
     public news() { }
 
-    public news(String title, String description, String pubDate,String link, String image_url, String source_id) {
+    public news(String title, String description, String pubDate,String link, String image_url, String source_id,int iv) {
         this.title=title;
         this.dataNews=description;
         this.date=pubDate;
         this.link=link;
         this.newsImage=image_url;
         this.source_id=source_id;
+        this.iv=iv;
+    }
+
+    public int getIv() {
+        return iv;
+    }
+
+    public void setIv(int iv) {
+        this.iv = iv;
     }
 
     public String getNewsImage() {
